@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/test")
 public class TestController {
-    @GetMapping("/ hello")
+    @GetMapping("/hello")
     public String hello(){
         return "hello";
     }
