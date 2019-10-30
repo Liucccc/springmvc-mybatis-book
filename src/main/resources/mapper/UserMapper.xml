@@ -7,9 +7,9 @@
         password as "password",
         age as "age"
     </sql>
-    <select id="findALl" resultType="com.Liucccc.entity.User">
+    <select id="findAll" resultType="com.Liucccc.entity.User">
         select
-        <include refid="userField"/>
-        from t_user
+         <include refid="userField"/>
+         from t_user
     </select>
 </mapper>

@@ -13,5 +13,5 @@ import java.util.List;
  */
 @Repository
 public interface UserDao {
-    List<User> findALl();
+    List<User> findAll();
 }
