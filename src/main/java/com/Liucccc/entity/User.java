@@ -9,40 +9,40 @@ import java.io.Serializable;
  * @date 2019-10-29 14:12
  */
 public class User implements Serializable {
-    private  Integer id;
-    private String userName;
-    private String password;
+    private String id;
+    private String name;
+    private String account;
 
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", userName='" + userName + '\'' +
-                ", password='" + password + '\'' +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", account='" + account + '\'' +
                 '}';
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getName() {
+        return name;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getPassword() {
-        return password;
+    public String getAccount() {
+        return account;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setAccount(String account) {
+        this.account = account;
     }
 }

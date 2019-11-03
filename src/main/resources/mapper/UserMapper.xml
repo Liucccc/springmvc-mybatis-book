@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.Liucccc.dao.UserDao">
-    <sql id="userField">
-        id as "id",
-        user_name as "userName",
-        password as "password",
-        age as "age"
+    <resultMap id="BaseResultMap" type="com.Liucccc.entity.User">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="account" column="account"/>
+    </resultMap>
+    <sql id="table_column">
+        id,
+        name,
+        account
     </sql>
-    <select id="findAll" resultType="com.Liucccc.entity.User">
-        select
-         <include refid="userField"/>
-         from t_user
+    <select id="find" resultMap="BaseResultMap">
+        SELECT
+        <include refid="table_column"/>
+        from user
+        <where>
+            id=#{id}
+        </where>
     </select>
 </mapper>

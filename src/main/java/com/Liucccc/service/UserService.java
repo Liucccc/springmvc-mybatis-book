@@ -1,8 +1,6 @@
 package com.Liucccc.service;
 
-import com.Liucccc.entity.User;
-
-import java.util.List;
+import com.Liucccc.dto.UserDTO;
 
 /**
  * UserService
@@ -11,5 +9,5 @@ import java.util.List;
  * @date 2019-10-29 14:16
  */
 public interface UserService {
-    List<User> findAll();
+    UserDTO find(String id);
 }
